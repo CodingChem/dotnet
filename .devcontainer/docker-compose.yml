@@ -1,0 +1,15 @@
+version: '3'
+services:
+  devcontainer:
+    image: mcr.microsoft.com/devcontainers/dotnet:1-9.0-bookworm
+    volumes:
+      - ../..:/workspace:cached
+    network_mode: service.db
+    command: sleep infinity
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=devcontainer
+      - POSTGRES_PASSWORD=devcontainer
+      - POSTGRES_DB=movies
