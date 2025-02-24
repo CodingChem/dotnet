@@ -3,7 +3,7 @@ services:
   devcontainer:
     build:
       context: .
-      dockerFile: Dockerfile
+      dockerfile: Dockerfile
     network_mode: service:db
     command: sleep infinity
     depends_on:
