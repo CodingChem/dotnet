@@ -9,7 +9,7 @@ public static class ApplicationServiceCollectionExtensions
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        services.AddSingleton<IMovieRepository, MovieRepository>();
+        services.AddScoped<IMovieRepository, MovieRepository>();
         return services;
     }
     public static IServiceCollection AddDatabase(this IServiceCollection services, string connectionString)
