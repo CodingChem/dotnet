@@ -1,7 +1,9 @@
 version: '3'
 services:
   devcontainer:
-    dockerFile: Dockerfile
+    build:
+      context: .
+      dockerFile: Dockerfile
     network_mode: service:db
     command: sleep infinity
     depends_on:
