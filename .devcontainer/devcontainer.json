@@ -16,8 +16,6 @@
 			]
 		}
 	},
-	"features": {
-		
-	}
+	"postCreateCommand": "dotnet tool install --global dotnet-ef"
 	// Use 'postCreateCommand' to run commands after the container is created.
 }
