@@ -2,7 +2,7 @@ version: '3'
 services:
   devcontainer:
     image: mcr.microsoft.com/devcontainers/dotnet:1-9.0-bookworm
-    network_mode: service.db
+    network_mode: service:db
     command: sleep infinity
     depends_on:
       - db
