@@ -5,13 +5,6 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${workspaceFolderBasename}",
-	"forwardPorts": [5000, 5001],
-	"portsAttributes": {
-		"5001": {
-			"protocol": "https"
-		}
-	},
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "dotnet restore"
 }
